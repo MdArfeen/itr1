@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>JSX and Babel</title>
+  </head>
+  <body>
+    <div style="text-align: center;font-family: sans-serif;" id="root"></div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.production.min.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.production.min.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+    <script type="text/babel">
+      // Your JSX code here
+      const Components=()=>{
+        return(
+          <>
+          <img src="https://cdn5.vectorstock.com/i/1000x1000/58/09/notification-bell-with-tick-checkmark-line-icon-vector-40905809.jpg"></img>
+          <h1>SUBSCRIBE</h1>
+          <p style={{
+            fontSize:"30px",
+            color:"darkgray"
+          }}>Subscribe to our newsletter & stay up to date!</p>
+          <div style={{
+            display:"flex",
+            gap:"20px",
+            justifyContent:"center"
+          }}>
+          <input style={{
+            fontSize:"20px",
+            padding:"10px 20px",
+            borderRadius:"25px",
+            backgroundColor:"#e4e6eb",
+            border:"none",
+          }} type="text" placeholder="john@doe.net" />
+          <button style={{
+            fontSize:"20px",
+            color:"white",
+            padding:"10px 20px",
+            backgroundColor:"#0d92f4",
+            border:"none",
+            borderRadius:"25px"
+          }}>Subscribe</button>
+          </div>
+          </>
+        );
+      };
+      ReactDOM.render(<Components/>,document.getElementById("root"));
+    </script>
+  </body>
+</html>
